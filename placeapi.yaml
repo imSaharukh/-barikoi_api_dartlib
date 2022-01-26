@@ -1,0 +1,139 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: placeapi
+servers:
+  - url: https://barikoi.xyz/v2/api
+paths:
+  /search/reverse/geocode:
+    get:
+      summary: Returns details about a particular place from lat lon
+      operationId: getrevgeoplace
+      tags:
+        - place
+      parameters:
+        - name: latitude
+          in: query
+          description: latitude of the location
+          required: true
+          schema:
+            type: number
+          example: 23.8
+        - name: longitude
+          in: query
+          description: longitude of the location
+          required: true
+          schema:
+            type: number
+          example: 90.23
+      responses:
+        '200':
+          description: Details about a place by lat lon
+          headers:
+            x-next:
+              description: A link to the next page of responses
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  place:
+                    $ref: '#/components/schemas/Place'
+                  status:
+                    type: integer
+                    format: int32
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /search/autocomplete:
+    get:
+      summary: Returns place lists from search query
+      operationId: getautocompleteplacelist
+      tags:
+        - place
+      parameters:
+        - name: q
+          in: query
+          description: Search query input parameter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: search result place list
+          headers:
+            x-next:
+              description: A link to the next page of responses
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  places:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Place'
+                  status:
+                    type: integer
+                    format: int32
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+security:
+  - key: []
+components:
+  securitySchemes:
+    key:
+      type: apiKey
+      description: API key to authorize requests.
+      name: key
+      in: query
+  schemas:
+    Place:
+      type: object
+      required:
+        - id
+        - address
+        - area
+        - city
+      properties:
+        id:
+          type: integer
+          format: int64
+        longitude:
+          type: number
+        latitude:
+          type: number
+        address:
+          type: string
+        area:
+          type: string
+        city:
+          type: string
+        pType:
+          type: string
+        postCode:
+          type: number
+        uCode:
+          type: string
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        status:
+          type: integer
+          format: int32
+        message:
+          type: string
