@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+
 
 // ignore_for_file: unused_import
 
@@ -13,13 +13,11 @@ part 'inline_response200.g.dart';
 
 abstract class InlineResponse200 implements Built<InlineResponse200, InlineResponse200Builder> {
 
-    @nullable
     @BuiltValueField(wireName: r'place')
-    Place get place;
+    Place? get place;
 
-    @nullable
     @BuiltValueField(wireName: r'status')
-    int get status;
+    int? get status;
 
     InlineResponse200._();
 
@@ -39,9 +37,9 @@ class _$InlineResponse200Serializer implements StructuredSerializer<InlineRespon
     final String wireName = r'InlineResponse200';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, InlineResponse200 object,
+    Iterable<Object?> serialize(Serializers serializers, InlineResponse200 object,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
+        final result = <Object?>[];
         if (object.place != null) {
             result
                 ..add(r'place')
@@ -58,13 +56,13 @@ class _$InlineResponse200Serializer implements StructuredSerializer<InlineRespon
     }
 
     @override
-    InlineResponse200 deserialize(Serializers serializers, Iterable<Object> serialized,
+    InlineResponse200 deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
         final result = InlineResponse200Builder();
 
         final iterator = serialized.iterator;
         while (iterator.moveNext()) {
-            final key = iterator.current as String;
+            final key = iterator.current as String?;
             iterator.moveNext();
             final dynamic value = iterator.current;
             switch (key) {
@@ -74,7 +72,7 @@ class _$InlineResponse200Serializer implements StructuredSerializer<InlineRespon
                     break;
                 case r'status':
                     result.status = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType(int)) as int?;
                     break;
             }
         }

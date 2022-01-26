@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
+
 
 part of 'inline_response2001.dart';
 
@@ -9,12 +9,12 @@ part of 'inline_response2001.dart';
 
 class _$InlineResponse2001 extends InlineResponse2001 {
   @override
-  final BuiltList<Place> places;
+  final BuiltList<Place>? places;
   @override
-  final int status;
+  final int? status;
 
   factory _$InlineResponse2001(
-          [void Function(InlineResponse2001Builder) updates]) =>
+          [void Function(InlineResponse2001Builder)? updates]) =>
       (new InlineResponse2001Builder()..update(updates)).build();
 
   _$InlineResponse2001._({this.places, this.status}) : super._();
@@ -52,15 +52,15 @@ class _$InlineResponse2001 extends InlineResponse2001 {
 
 class InlineResponse2001Builder
     implements Builder<InlineResponse2001, InlineResponse2001Builder> {
-  _$InlineResponse2001 _$v;
+  _$InlineResponse2001? _$v;
 
-  ListBuilder<Place> _places;
+  ListBuilder<Place>? _places;
   ListBuilder<Place> get places => _$this._places ??= new ListBuilder<Place>();
   set places(ListBuilder<Place> places) => _$this._places = places;
 
-  int _status;
-  int get status => _$this._status;
-  set status(int status) => _$this._status = status;
+  int? _status;
+  int? get status => _$this._status;
+  set status(int? status) => _$this._status = status;
 
   InlineResponse2001Builder() {
     InlineResponse2001._initializeBuilder(this);
@@ -83,7 +83,7 @@ class InlineResponse2001Builder
   }
 
   @override
-  void update(void Function(InlineResponse2001Builder) updates) {
+  void update(void Function(InlineResponse2001Builder)? updates) {
     if (updates != null) updates(this);
   }
 
@@ -94,7 +94,7 @@ class InlineResponse2001Builder
       _$result = _$v ??
           new _$InlineResponse2001._(places: _places?.build(), status: status);
     } catch (_) {
-      String _$failedField;
+      late String _$failedField;
       try {
         _$failedField = 'places';
         _places?.build();

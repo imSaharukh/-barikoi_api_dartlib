@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
+
 
 part of 'error.dart';
 
@@ -9,14 +9,14 @@ part of 'error.dart';
 
 class _$Error extends Error {
   @override
-  final int status;
+  final int? status;
   @override
   final String message;
 
-  factory _$Error([void Function(ErrorBuilder) updates]) =>
+  factory _$Error([void Function(ErrorBuilder)? updates]) =>
       (new ErrorBuilder()..update(updates)).build();
 
-  _$Error._({this.status, this.message}) : super._() {
+  _$Error._({this.status, required this.message}) : super._() {
     BuiltValueNullFieldError.checkNotNull(message, 'Error', 'message');
   }
 
@@ -48,15 +48,15 @@ class _$Error extends Error {
 }
 
 class ErrorBuilder implements Builder<Error, ErrorBuilder> {
-  _$Error _$v;
+  _$Error? _$v;
 
-  int _status;
-  int get status => _$this._status;
-  set status(int status) => _$this._status = status;
+  int? _status;
+  int? get status => _$this._status;
+  set status(int? status) => _$this._status = status;
 
-  String _message;
-  String get message => _$this._message;
-  set message(String message) => _$this._message = message;
+  String? _message;
+  String? get message => _$this._message;
+  set message(String? message) => _$this._message = message;
 
   ErrorBuilder() {
     Error._initializeBuilder(this);
@@ -79,7 +79,7 @@ class ErrorBuilder implements Builder<Error, ErrorBuilder> {
   }
 
   @override
-  void update(void Function(ErrorBuilder) updates) {
+  void update(void Function(ErrorBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+
 
 // ignore_for_file: unused_import
 
@@ -24,8 +24,8 @@ class BasicAuthInterceptor extends AuthInterceptor {
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     final metadataAuthInfo = getAuthInfo(options, 'basic');
     for (final info in metadataAuthInfo) {
-      final authName = info['name'] as String;
-      final basicAuthInfo = authInfo[authName];
+      final authName = info['name'] as String?;
+      final basicAuthInfo = authInfo[authName!];
       if (basicAuthInfo != null) {
         final basicAuth = 'Basic ' +
             base64Encode(utf8

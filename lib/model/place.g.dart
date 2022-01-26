@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// @dart=2.7
+
 
 part of 'place.dart';
 
@@ -11,9 +11,9 @@ class _$Place extends Place {
   @override
   final int id;
   @override
-  final num longitude;
+  final num? longitude;
   @override
-  final num latitude;
+  final num? latitude;
   @override
   final String address;
   @override
@@ -21,22 +21,22 @@ class _$Place extends Place {
   @override
   final String city;
   @override
-  final String pType;
+  final String? pType;
   @override
-  final num postCode;
+  final num? postCode;
   @override
-  final String uCode;
+  final String? uCode;
 
-  factory _$Place([void Function(PlaceBuilder) updates]) =>
+  factory _$Place([void Function(PlaceBuilder)? updates]) =>
       (new PlaceBuilder()..update(updates)).build();
 
   _$Place._(
-      {this.id,
+      {required this.id,
       this.longitude,
       this.latitude,
-      this.address,
-      this.area,
-      this.city,
+      required this.address,
+      required this.area,
+      required this.city,
       this.pType,
       this.postCode,
       this.uCode})
@@ -104,43 +104,43 @@ class _$Place extends Place {
 }
 
 class PlaceBuilder implements Builder<Place, PlaceBuilder> {
-  _$Place _$v;
+  _$Place? _$v;
 
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
+  int? _id;
+  int? get id => _$this._id;
+  set id(int? id) => _$this._id = id;
 
-  num _longitude;
-  num get longitude => _$this._longitude;
-  set longitude(num longitude) => _$this._longitude = longitude;
+  num? _longitude;
+  num? get longitude => _$this._longitude;
+  set longitude(num? longitude) => _$this._longitude = longitude;
 
-  num _latitude;
-  num get latitude => _$this._latitude;
-  set latitude(num latitude) => _$this._latitude = latitude;
+  num? _latitude;
+  num? get latitude => _$this._latitude;
+  set latitude(num? latitude) => _$this._latitude = latitude;
 
-  String _address;
-  String get address => _$this._address;
-  set address(String address) => _$this._address = address;
+  String? _address;
+  String? get address => _$this._address;
+  set address(String? address) => _$this._address = address;
 
-  String _area;
-  String get area => _$this._area;
-  set area(String area) => _$this._area = area;
+  String? _area;
+  String? get area => _$this._area;
+  set area(String? area) => _$this._area = area;
 
-  String _city;
-  String get city => _$this._city;
-  set city(String city) => _$this._city = city;
+  String? _city;
+  String? get city => _$this._city;
+  set city(String? city) => _$this._city = city;
 
-  String _pType;
-  String get pType => _$this._pType;
-  set pType(String pType) => _$this._pType = pType;
+  String? _pType;
+  String? get pType => _$this._pType;
+  set pType(String? pType) => _$this._pType = pType;
 
-  num _postCode;
-  num get postCode => _$this._postCode;
-  set postCode(num postCode) => _$this._postCode = postCode;
+  num? _postCode;
+  num? get postCode => _$this._postCode;
+  set postCode(num? postCode) => _$this._postCode = postCode;
 
-  String _uCode;
-  String get uCode => _$this._uCode;
-  set uCode(String uCode) => _$this._uCode = uCode;
+  String? _uCode;
+  String? get uCode => _$this._uCode;
+  set uCode(String? uCode) => _$this._uCode = uCode;
 
   PlaceBuilder() {
     Place._initializeBuilder(this);
@@ -170,7 +170,7 @@ class PlaceBuilder implements Builder<Place, PlaceBuilder> {
   }
 
   @override
-  void update(void Function(PlaceBuilder) updates) {
+  void update(void Function(PlaceBuilder)? updates) {
     if (updates != null) updates(this);
   }
 

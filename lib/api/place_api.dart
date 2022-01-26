@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+
 
 // ignore_for_file: unused_import
 
@@ -25,12 +25,12 @@ class PlaceApi {
   ///
   Future<Response<InlineResponse2001>> getautocompleteplacelist(
     String q, {
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/search/autocomplete',
@@ -71,7 +71,7 @@ class PlaceApi {
     final _responseData = _serializers.deserialize(
       _response.data,
       specifiedType: _responseType,
-    ) as InlineResponse2001;
+    ) as InlineResponse2001?;
 
     return Response<InlineResponse2001>(
       requestOptions: _request,
@@ -92,12 +92,12 @@ class PlaceApi {
   Future<Response<InlineResponse200>> getrevgeoplace(
     num latitude,
     num longitude, {
-    CancelToken cancelToken,
-    Map<String, dynamic> headers,
-    Map<String, dynamic> extra,
-    ValidateStatus validateStatus,
-    ProgressCallback onSendProgress,
-    ProgressCallback onReceiveProgress,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
   }) async {
     final _request = RequestOptions(
       path: r'/search/reverse/geocode',
@@ -139,7 +139,7 @@ class PlaceApi {
     final _responseData = _serializers.deserialize(
       _response.data,
       specifiedType: _responseType,
-    ) as InlineResponse200;
+    ) as InlineResponse200?;
 
     return Response<InlineResponse200>(
       requestOptions: _request,

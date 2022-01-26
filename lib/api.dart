@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+
 
 // ignore_for_file: unused_import
 
@@ -31,10 +31,10 @@ class BarikoiApi {
     final Serializers serializers;
 
     BarikoiApi({
-      Dio dio,
-      Serializers serializers,
-      String basePathOverride,
-      List<Interceptor> interceptors,
+      Dio? dio,
+      Serializers? serializers,
+      String? basePathOverride,
+      List<Interceptor>? interceptors,
     })  : this.serializers = serializers ?? standardSerializers,
           this.dio = dio ??
               Dio(BaseOptions(

@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
+
 
 // ignore_for_file: unused_import
 
@@ -14,13 +14,11 @@ part 'inline_response2001.g.dart';
 
 abstract class InlineResponse2001 implements Built<InlineResponse2001, InlineResponse2001Builder> {
 
-    @nullable
     @BuiltValueField(wireName: r'places')
-    BuiltList<Place> get places;
+    BuiltList<Place>? get places;
 
-    @nullable
     @BuiltValueField(wireName: r'status')
-    int get status;
+    int? get status;
 
     InlineResponse2001._();
 
@@ -40,9 +38,9 @@ class _$InlineResponse2001Serializer implements StructuredSerializer<InlineRespo
     final String wireName = r'InlineResponse2001';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, InlineResponse2001 object,
+    Iterable<Object?> serialize(Serializers serializers, InlineResponse2001 object,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
+        final result = <Object?>[];
         if (object.places != null) {
             result
                 ..add(r'places')
@@ -59,13 +57,13 @@ class _$InlineResponse2001Serializer implements StructuredSerializer<InlineRespo
     }
 
     @override
-    InlineResponse2001 deserialize(Serializers serializers, Iterable<Object> serialized,
+    InlineResponse2001 deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
         final result = InlineResponse2001Builder();
 
         final iterator = serialized.iterator;
         while (iterator.moveNext()) {
-            final key = iterator.current as String;
+            final key = iterator.current as String?;
             iterator.moveNext();
             final dynamic value = iterator.current;
             switch (key) {
@@ -75,7 +73,7 @@ class _$InlineResponse2001Serializer implements StructuredSerializer<InlineRespo
                     break;
                 case r'status':
                     result.status = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType(int)) as int?;
                     break;
             }
         }
